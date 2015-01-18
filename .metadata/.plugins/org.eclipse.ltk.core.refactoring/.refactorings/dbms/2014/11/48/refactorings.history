@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Change method &apos;public Boolean servlet.UserAuthentication.authentic(String userID, String pwd)&apos; to &apos;public String authentic(String userID, String pwd)&apos;&#x0A;- Original project: &apos;dbms&apos;&#x0A;- Original element: &apos;servlet.UserAuthentication.authentic(...)&apos;&#x0A;- New return type: &apos;String&apos;" delegate="false" deprecate="true" description="Change method &apos;authentic&apos;" flags="589830" id="org.eclipse.jdt.ui.change.method.signature" input="/src\/main\/java&lt;servlet{UserAuthentication.java[UserAuthentication~authentic~QString;~QString;" name="authentic" parameter1="String userID 0 String userID false" parameter2="String pwd 1 String pwd false" return="String" stamp="1417060432429" version="1.0"/>
+</session>

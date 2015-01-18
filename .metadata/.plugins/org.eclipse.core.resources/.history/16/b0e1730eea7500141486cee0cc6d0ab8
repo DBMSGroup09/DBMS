@@ -1,0 +1,50 @@
+package servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.lang.StringUtils;
+
+public class MyFirstServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2934850343940980757L;
+
+	@Override
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) {
+		String userID = request.getParameter("userID");
+		String pwd = request.getParameter("password");
+		UserAuthentication authentication = new UserAuthentication();
+		String type = authentication.authentic(userID, pwd);
+		if (StringUtils.isNotBlank(type)) {
+			if (type.equals("employee")) {
+
+			} else {
+				// put managers call here
+			}
+
+		} else {
+			// This block is called if user fails to get authentication 
+			try {
+				PrintWriter printMessage = response.getWriter();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) {
+
+	}
+
+}

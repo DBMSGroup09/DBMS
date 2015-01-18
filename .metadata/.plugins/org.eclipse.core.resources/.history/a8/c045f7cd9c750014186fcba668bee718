@@ -1,0 +1,13 @@
+package utility;
+
+public enum TransactionDetail {
+	
+	COST("cost");
+  
+	private String value;
+	private TransactionDetail(String value){
+		this.value=value;
+	}
+	
+
+}
